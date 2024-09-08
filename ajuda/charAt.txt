@@ -1,0 +1,8 @@
+//charAt
+public class Main {
+    public static void main(String[] args) {
+        String palavra = "Java";
+        char letra = palavra.charAt(1);//Retorna o caractere da posição n, que foi passada por parâmetro;
+        System.out.println(letra); 
+    }
+}
