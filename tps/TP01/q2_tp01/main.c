@@ -2,6 +2,7 @@
 #include <string.h>
 
 void leStr(char *palavra){
+	getchar();
 	scanf("%s",palavra);
 }
 
@@ -19,20 +20,23 @@ void inverte(char *s1, char *s2){
 
 void verificaIgual(char *s1, char *s2){	
 	if(strcmp(s1,s2)==0){//verifica se são iguais 
-		printf("IGUAIS\n");
+		printf("SIM\n");
 	}else{
-		printf("DIFERENTES\n");
+		printf("NAO\n");
 	}
 }
 
 int main(){
-	int tam = 10;//mem
+	int tam = 100;//mem
 	char s1[tam];
 	char s2[tam];
 	
 	leStr(s1);//leitura
+	inverte(s1,s2);
+	verificaIgual(s1,s2);
 
 	while(strcmp(s1,"FIM")!=0){
+		leStr(s1);
 		inverte(s1,s2);
 		verificaIgual(s1,s2);
 	}
