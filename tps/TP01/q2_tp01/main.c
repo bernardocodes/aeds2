@@ -26,7 +26,7 @@ void verificaIgual(char *s1, char *s2){
 }
 
 int main(){
-	int tam = 200;
+	int tam = 2000;
 	char s1[tam];
 	char s2[tam];
 	
