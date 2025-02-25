@@ -1,3 +1,6 @@
+/*1)Escreva uma função recursiva que, dado dois números x e n , calcula o valor x∗n ( x multiplicado por n ). Não use
+o operador de multiplicação.*/
+
 #include <stdio.h>
 
 int multiplicar(int a, int b, int acc){

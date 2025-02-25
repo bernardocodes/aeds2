@@ -1,3 +1,6 @@
+/*2)Escreva uma função que recebe um número inteiro e retorna o fatorial deste número usando a abordagem
+recursiva.*/
+
 #include <stdio.h> 
 
 int fat(int fatorial,int acc, int i){
