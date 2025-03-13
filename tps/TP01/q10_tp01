@@ -1,0 +1,31 @@
+public class Main {
+
+    public static int contaPalavras(StringBuilder aux, int tam){
+        int cont = 0;
+        for(int i=0;i<tam;i++){
+            if(aux.charAt(i)==' '){//espaço?
+                cont++;
+            }
+        }
+
+        return cont + 1;
+    }
+    public static void main(String[] args) {
+
+        int qtdPalavras = -1;
+        String frase = MyIO.readLine();
+
+        int tam = frase.length();//para setar o for
+
+        StringBuilder aux = new StringBuilder(frase);//para ser possível acessar posições específicas da frase
+
+        qtdPalavras = contaPalavras(aux,tam);
+
+        MyIO.println(qtdPalavras);
+    }
+}
+
+//bernardo sousa polaki
+//palavras = qtdEspaço + 1
+
+/*ficou faltando fazer o loop. mas aparentemente está tudo certo*/
