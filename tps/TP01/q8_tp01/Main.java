@@ -1,16 +1,15 @@
 public  class Main{
-    public static int somaRecurssiva(int soma,int resto,int quociente,int divisor){
-        if(quociente>0){
-            quociente = divisor/10;//separar os dígitos e somar um por um
-            resto = divisor%10;
-            divisor = quociente;
+    public static int somaRecurssiva(int soma,int divisor){//separa e soma os dígitos
+        if(divisor>0){
+            int resto;
+            resto = divisor%10;//pega o dígito da vez, separado
             soma+=resto;
-            return somaRecurssiva(soma,resto,quociente,divisor);
+            return somaRecurssiva(soma,(divisor/10));
         }else{
             return soma;
         }
     }
-    public static int converteStr(String str){
+    public static int converteStr(String str){//String é um número?
         try {
             int n = Integer.parseInt(str);
             return n;
@@ -20,13 +19,14 @@ public  class Main{
     }
     public static void main(String[] args){
         String colecaoNum;
-        int soma = 0;
+        
         colecaoNum = MyIO.readLine();
 
-        while(colecaoNum.compareTo("FIM")!=0){
+        while(colecaoNum.compareTo("FIM")!=0){//ler múltiplas entradas
             int n =converteStr(colecaoNum);
-            soma = somaRecurssiva(0,0,1,n);
-            MyIO.println(soma);
+            int soma = somaRecurssiva(0,n);
+            //MyIO.println(soma);
+            System.out.println(soma);
             colecaoNum = MyIO.readLine();
         }
     }
